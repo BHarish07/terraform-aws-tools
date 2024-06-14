@@ -41,7 +41,7 @@ ingress {
 }
 
 
-resource "aws_instance" "DB" {
+resource "aws_instance" "Jenkins_master" {
   ami           = data.aws_ami.ami_info.id
   instance_type = "t3.medium"
   vpc_security_group_ids = [aws_security_group.allow_all_traffic.id]
@@ -52,7 +52,7 @@ resource "aws_instance" "DB" {
   }
 }
 
-resource "aws_instance" "DB" {
+resource "aws_instance" "jenkins_agent" {
   ami           = data.aws_ami.ami_info.id
   instance_type = "t3.medium"
   vpc_security_group_ids = [aws_security_group.allow_all_traffic.id]
