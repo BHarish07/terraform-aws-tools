@@ -14,3 +14,8 @@ variable "common_tags" {
     }
   }
 
+  variable "zone_name" {
+  type        = string
+  default     = "harishbalike.online"
+  description = "description"
+}
