@@ -83,7 +83,7 @@ module "jenkins_agent" {
 }
 
 resource "aws_key_pair" "tools_pub"{
-  key_name   = "tools_nexus"
+  key_name   = "tools"
   #public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAaoyW5Sw4JsvbTpRgIPO1ZUBGtB30TdDklkCMTgIdxaReXQbLs+TjTr23tx1m8tRuiPqSb52U8TN+5D0KMScM9mplKUZR1shLV0EaUiPjWEGAgKltaMVoiNz9dAG8AiflWzUUD5upKneKEron4+BDVKcD/Raf/CWU7du865zC/NHeEqkEyKQnZEJA6lHGWt6lMuj7OuQJzrCtjIUBlOUWpfVc0b4rEOlCqh/LdfkZAWbS07QHZpAAbBcVWZIFqYOzV5QPFFVb0BhAYUxRDFlJ7gcZFfBmjtPB9I6s0SeufXutVDgplz72381m3EE3J+w+IzLPMAiCxLfWV0C+PHHhYVCxN0K/yWexENrfJry6wekUR27mwQvDZDGFE5RWo+d22SccuWYmYtjw6LdpNV9P96ZhT14IicGOTdsGKksJ5aG+f+ogsYuN12Fgf7wBMCeu2hB26vF0SfV6lP3hUEIo4ycjMNBBH4bisiM+//2PXwMjCTMCkXmPSOoioKB63jM= Harish@DESKTOP-TSJOBG3"
    public_key = file("~/.ssh/tools.pub")
 }
@@ -153,7 +153,7 @@ module "records" {
 
   records = [
     {
-      name    = "jenkins-master"
+      name    = "jenkins"
       type    = "A"
       ttl     = 1
       records = [
